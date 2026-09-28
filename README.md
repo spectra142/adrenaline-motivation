@@ -17,7 +17,7 @@ A free, open-source motivational quote website. One tap fires a random quote —
 
 ## Tech stack
 
-React 19 · TypeScript · Vite · Tailwind CSS · shadcn/ui · lucide-react
+React 19 · TypeScript · Vite · Tailwind CSS · lucide-react
 
 ## Run it locally
 
@@ -33,6 +33,25 @@ npm run build   # outputs to dist/
 ```
 
 The built site is fully static — host `dist/` on any static host, free forever.
+
+## Project structure
+
+```
+src/
+  data/quotes.ts        # all 48 quotes + categories + "Your Move" actions
+  hooks/useFavorites.ts # localStorage favorites
+  sections/             # Hero, QuoteEngine, QuoteWall, Footer
+  pages/Home.tsx        # single-page composition
+```
+
+> Note: this repo ships only the components the app actually uses. It was
+> scaffolded with shadcn/ui — if you want the full component library, run
+> `npx shadcn@latest add --all` (see `components.json`).
+
+## Contributing
+
+PRs welcome — add quotes to `src/data/quotes.ts` (every quote needs a `spark`:
+one small action the reader can take right now).
 
 ## License
 
